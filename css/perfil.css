@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(0, 136, 255, 0.17), transparent 30%),
+        radial-gradient(circle at 90% 0%, rgba(106, 0, 255, 0.14), transparent 30%),
+        linear-gradient(145deg, #03050a, #071019 55%, #020305);
+}
+
+.perfil-container {
+    width: min(1450px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 130px 0 80px;
+}
+
+.perfil-cabecalho {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(32px, 5vw, 62px);
+    border: 1px solid rgba(0, 217, 255, 0.22);
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at 86% 20%, rgba(0, 217, 255, 0.14), transparent 26%),
+        radial-gradient(circle at 70% 80%, rgba(106, 0, 255, 0.12), transparent 30%),
+        rgba(8, 13, 20, 0.9);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.42);
+}
+
+.perfil-tag,
+.painel-tag {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: #00d9ff;
+}
+
+.perfil-cabecalho h1 {
+    margin-top: 8px;
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(58px, 8vw, 118px);
+    line-height: 0.95;
+    background: linear-gradient(90deg, #ffffff, #00eaff 45%, #8c35ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.perfil-cabecalho > p:last-of-type {
+    margin-top: 12px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 22px;
+    color: #aeb8c4;
+}
+
+.perfil-estatisticas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+}
+
+.perfil-estatisticas div {
+    min-width: 180px;
+    padding: 16px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.perfil-estatisticas span,
+.perfil-estatisticas strong {
+    display: block;
+}
+
+.perfil-estatisticas span {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    color: #72808d;
+}
+
+.perfil-estatisticas strong {
+    margin-top: 6px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 24px;
+}
+
+.perfil-grid {
+    display: grid;
+    grid-template-columns: minmax(330px, 0.8fr) minmax(480px, 1.2fr);
+    gap: 24px;
+    margin-top: 26px;
+}
+
+.painel-perfil {
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    background: rgba(8, 12, 18, 0.9);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+}
+
+.painel-perfil h2 {
+    margin-top: 8px;
+    font-family: 'Anton', sans-serif;
+    font-size: 38px;
+    letter-spacing: 0.5px;
+}
+
+.painel-descricao {
+    margin-top: 8px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px;
+    line-height: 1.45;
+    color: #8895a2;
+}
+
+.form-perfil {
+    display: grid;
+    gap: 16px;
+    margin-top: 26px;
+}
+
+.form-perfil label {
+    display: grid;
+    gap: 7px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #c9d2db;
+}
+
+.form-perfil input {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    outline: none;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.04);
+    transition: 0.2s ease;
+}
+
+.form-perfil input:focus {
+    border-color: #00bde7;
+    box-shadow: 0 0 0 3px rgba(0, 189, 231, 0.08);
+}
+
+.form-perfil button,
+.sem-inscricoes a {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 18px;
+    border: 1px solid #00a9d0;
+    border-radius: 7px;
+    color: #ffffff;
+    background: linear-gradient(90deg, #007fa3, #00bde7);
+    text-decoration: none;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.lista-inscricoes {
+    display: grid;
+    gap: 13px;
+    margin-top: 24px;
+}
+
+.inscricao-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px;
+    border: 1px solid rgba(0, 217, 255, 0.12);
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(0, 217, 255, 0.045), rgba(106, 0, 255, 0.035));
+}
+
+.inscricao-card span {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    color: #00d9ff;
+}
+
+.inscricao-card h3 {
+    margin-top: 5px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 22px;
+}
+
+.inscricao-card p {
+    margin-top: 6px;
+    font-family: 'Rajdhani', sans-serif;
+    color: #8693a0;
+}
+
+.inscricao-card button {
+    min-height: 40px;
+    padding: 0 14px;
+    border: 1px solid rgba(255, 82, 107, 0.3);
+    border-radius: 7px;
+    color: #ff9bac;
+    background: rgba(255, 82, 107, 0.07);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.sem-inscricoes {
+    margin-top: 24px;
+    padding: 28px;
+    border: 1px dashed rgba(0, 217, 255, 0.2);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.sem-inscricoes strong {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 20px;
+}
+
+.sem-inscricoes p {
+    margin: 8px 0 18px;
+    font-family: 'Rajdhani', sans-serif;
+    color: #87939f;
+}
+
+.flash-perfil {
+    position: fixed;
+    top: 92px;
+    left: 50%;
+    z-index: 2500;
+    width: min(560px, calc(100% - 30px));
+    transform: translateX(-50%);
+    padding: 14px 17px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 800;
+    backdrop-filter: blur(16px);
+}
+
+.flash-perfil.sucesso {
+    color: #baffdf;
+    border: 1px solid rgba(67, 233, 164, 0.4);
+    background: rgba(6, 45, 34, 0.94);
+}
+
+.flash-perfil.erro {
+    color: #ffc2ca;
+    border: 1px solid rgba(255, 80, 105, 0.42);
+    background: rgba(52, 8, 16, 0.94);
+}
+
+.flash-perfil.aviso {
+    color: #ffe9a6;
+    border: 1px solid rgba(255, 205, 76, 0.4);
+    background: rgba(49, 36, 7, 0.94);
+}
+
+@media (max-width: 900px) {
+    .perfil-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .perfil-container {
+        width: calc(100% - 28px);
+        padding-top: 105px;
+    }
+
+    .perfil-cabecalho,
+    .painel-perfil {
+        padding: 24px 18px;
+    }
+
+    .inscricao-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .inscricao-card form,
+    .inscricao-card button {
+        width: 100%;
+    }
+}

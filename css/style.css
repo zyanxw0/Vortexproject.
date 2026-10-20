@@ -1,0 +1,1003 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #05070a;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+.inicio {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 75px;
+    overflow: hidden;
+}
+
+.secao-inicio {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.inicio-conteudo {
+    width: min(1600px, calc(100% - 80px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:
+        minmax(260px, 0.9fr)
+        2px
+        minmax(420px, 1.2fr);
+    align-items: center;
+    gap: clamp(25px, 4vw, 80px);
+}
+
+.area-logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vortex {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    display: block;
+}
+
+.linha-vertical {
+    width: 2px;
+    height: min(55vh, 590px);
+    background: linear-gradient(
+        180deg,
+        transparent,
+        #00d9ff,
+        #0088ff,
+        #8c35ff,
+        #0088ff,
+        #00d9ff,
+        transparent
+    );
+    box-shadow:
+        0 0 8px rgba(0, 217, 255, 0.5),
+        0 0 18px rgba(0, 136, 255, 0.25);
+}
+
+.area-texto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.titulo-vortex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+}
+
+p.sobrenos {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(55px, 6vw, 120px);
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+    margin: 0;
+    line-height: 0.95;
+}
+
+p.vortexx {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(75px, 8vw, 166px);
+    background: linear-gradient(
+        90deg,
+        #e3f6ff 0%,
+        #00eaff 25%,
+        #0088ff 50%,
+        #8c35ff 75%,
+        #ffffff 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.7));
+    margin: 0;
+    line-height: 0.95;
+}
+
+.descricao-container {
+    max-width: 700px;
+    margin-top: clamp(25px, 3vw, 45px);
+}
+
+p.descricao-vortex {
+    font-family: 'Rajdhani', Arial, sans-serif;
+    font-size: clamp(16px, 1.5vw, 24px);
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    color: #ffffff;
+    text-shadow: 3px -3px 5px #1a1919;
+    margin: 0;
+}
+
+p.texto-JOGOS-COMPETITIVOS- {
+    font-family: 'Rajdhani', Arial, sans-serif;
+    font-size: clamp(19px, 1.6vw, 26px);
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: linear-gradient(
+        90deg,
+        #1c4d59,
+        #0fa0c3,
+        #040606,
+        #fefefe,
+        #fefefe
+    );
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    margin-top: 5px;
+}
+
+p.texto-inscrevase {
+    font-family: 'Rajdhani', Arial, sans-serif;
+    font-size: clamp(32px, 2.2vw, 50px);
+    font-weight: 900;
+}
+
+.botoes-vortex {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.botao-campeonatos,
+.botao-conhecer {
+    padding: 15px 24px;
+    color: white;
+    font-family: 'Rajdhani', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.botao-campeonatos {
+    background: linear-gradient(
+        90deg,
+        #007fa3,
+        #00bde7
+    );
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.25);
+}
+
+.botao-campeonatos:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(0, 217, 255, 0.55);
+}
+
+.botao-conhecer {
+    padding: 14px 24px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid #00bde7;
+}
+
+.botao-conhecer:hover {
+    background: rgba(0, 189, 231, 0.15);
+    border-color: #00eaff;
+    transform: translateY(-2px);
+}
+
+.seta-baixo {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: 58px;
+    transform: translateX(-50%);
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    z-index: 5;
+}
+
+.seta-baixo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.seta-baixo:hover {
+    transform: translateX(-50%) translateY(6px);
+}
+
+.campeonatos {
+    position: relative;
+    min-height: 100vh;
+    padding: 110px 6% 120px;
+    background:
+        radial-gradient(
+            circle at 18% 12%,
+            rgba(0, 136, 255, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(106, 0, 255, 0.12),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #020017 0%,
+            #070b11 42%,
+            #020406 100%
+        );
+    border-top: 1px solid rgba(0, 217, 255, 0.18);
+}
+
+.campeonatos-conteudo {
+    width: min(1600px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:
+        minmax(420px, 1fr)
+        minmax(380px, 0.9fr);
+    align-items: center;
+    gap: clamp(45px, 7vw, 120px);
+}
+
+.campeonatos-introducao {
+    max-width: 780px;
+}
+
+.campeonatos-tag,
+.titulo-secao-campeonatos > p {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #00d9ff;
+    letter-spacing: 3px;
+    line-height:65px;
+}
+
+.campeonatos-introducao h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(56px, 6vw, 105px);
+    line-height: 100px;
+    margin-top: 12px;
+    letter-spacing: 1px;
+}
+
+.campeonatos-descricao {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: clamp(19px, 1.5vw, 24px);
+    line-height: 1.55;
+    max-width: 690px;
+    margin-top: 28px;
+    color: #b8c1ca;
+}
+
+.campeonatos-destaques {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.campeonatos-destaques span {
+    padding: 9px 13px;
+    border: 1px solid rgba(0, 217, 255, 0.25);
+    background: rgba(0, 217, 255, 0.06);
+    border-radius: 999px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #d9faff;
+}
+
+.area-vortexcampeoes {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.vortexcampeoes {
+    width: 100%;
+    max-width: 720px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 18px;
+    border: 1px solid rgba(0, 217, 255, 0.28);
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.55),
+        0 0 35px rgba(0, 136, 255, 0.12);
+}
+
+.como-funciona,
+.campeonatos-disponiveis {
+    width: min(1600px, 100%);
+    margin: 120px auto 0;
+}
+
+.titulo-secao-campeonatos {
+    max-width: 820px;
+}
+
+.titulo-secao-campeonatos h3 {
+    margin-top: 10px;
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(42px, 4vw, 72px);
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+.titulo-secao-campeonatos > span {
+    display: block;
+    margin-top: 16px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #aeb7c0;
+}
+
+.etapas-campeonato {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 42px;
+}
+
+.etapa-card {
+    min-height: 230px;
+    padding: 28px;
+    background: linear-gradient(
+        145deg,
+        rgba(14, 21, 29, 0.96),
+        rgba(4, 8, 12, 0.94)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.etapa-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 217, 255, 0.38);
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(0, 136, 255, 0.08);
+}
+
+.etapa-numero {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #00d9ff;
+}
+
+.etapa-card h4 {
+    margin-top: 34px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 23px;
+    line-height: 1.1;
+}
+
+.etapa-card p {
+    margin-top: 12px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 17px;
+    line-height: 1.45;
+    color: #9ba6b1;
+}
+
+.cards-campeonatos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 42px;
+}
+
+.campeonato-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    background: #080c11;
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.32);
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.campeonato-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(0, 217, 255, 0.38);
+    box-shadow:
+        0 28px 70px rgba(0, 0, 0, 0.42),
+        0 0 28px rgba(0, 136, 255, 0.1);
+}
+
+.campeonato-topo {
+    position: relative;
+    height: 180px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.campeonato-topo::after {
+    position: absolute;
+    right: -8px;
+    bottom: -42px;
+    font-family: 'Anton', sans-serif;
+    font-size: 105px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.08);
+    letter-spacing: 2px;
+}
+
+.valorant-card .campeonato-topo {
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(255, 70, 90, 0.48),
+            transparent 34%
+        ),
+        linear-gradient(
+            135deg,
+            #23070c,
+            #07121c 72%
+        );
+}
+
+.valorant-card .campeonato-topo::after {
+    content: "VAL";
+}
+
+.cs2-card .campeonato-topo {
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(255, 145, 45, 0.5),
+            transparent 34%
+        ),
+        linear-gradient(
+            135deg,
+            #221308,
+            #07121c 72%
+        );
+}
+
+.cs2-card .campeonato-topo::after {
+    content: "CS2";
+}
+
+.lol-card .campeonato-topo {
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(188, 136, 255, 0.45),
+            transparent 34%
+        ),
+        linear-gradient(
+            135deg,
+            #120a24,
+            #07121c 72%
+        );
+}
+
+.lol-card .campeonato-topo::after {
+    content: "LOL";
+}
+
+.campeonato-status {
+    position: relative;
+    z-index: 2;
+    width: fit-content;
+    padding: 7px 10px;
+    border-radius: 999px;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+}
+
+.campeonato-status.aberto {
+    background: rgba(52, 211, 153, 0.13);
+    border: 1px solid rgba(52, 211, 153, 0.35);
+    color: #7dffcf;
+}
+
+.campeonato-status.em-breve {
+    background: rgba(250, 204, 21, 0.12);
+    border: 1px solid rgba(250, 204, 21, 0.32);
+    color: #ffe77b;
+}
+
+.campeonato-jogo {
+    position: relative;
+    z-index: 2;
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(26px, 2vw, 36px);
+    letter-spacing: 1px;
+}
+
+.campeonato-corpo {
+    padding: 25px;
+}
+
+.campeonato-edicao {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    color: #00d9ff;
+}
+
+.campeonato-corpo h4 {
+    margin-top: 8px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 29px;
+    line-height: 1.05;
+}
+
+.campeonato-resumo {
+    min-height: 52px;
+    margin-top: 12px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px;
+    line-height: 1.45;
+    color: #98a3ae;
+}
+
+.campeonato-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+    margin-top: 22px;
+}
+
+.campeonato-info div {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 9px;
+}
+
+.campeonato-info span,
+.campeonato-info strong {
+    display: block;
+}
+
+.campeonato-info span {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #75808b;
+}
+
+.campeonato-info strong {
+    margin-top: 4px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.participar-campeonato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+    margin-top: 22px;
+    background: linear-gradient(
+        90deg,
+        #007fa3,
+        #00bde7
+    );
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    box-shadow: 0 0 16px rgba(0, 217, 255, 0.16);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.participar-campeonato:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 26px rgba(0, 217, 255, 0.42);
+}
+
+.aviso-login-campeonato {
+    margin-top: 22px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px;
+    color: #7f8a95;
+}
+
+@media (max-width: 1200px) {
+    .inicio-conteudo {
+        width: calc(100% - 50px);
+        grid-template-columns:
+            minmax(240px, 0.85fr)
+            2px
+            minmax(380px, 1.15fr);
+        gap: clamp(20px, 3vw, 45px);
+    }
+
+    .vortex {
+        max-width: 520px;
+    }
+
+    .campeonatos-conteudo {
+        grid-template-columns:
+            minmax(360px, 1fr)
+            minmax(330px, 0.9fr);
+        gap: 45px;
+    }
+
+    .etapas-campeonato {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cards-campeonatos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .lol-card {
+        grid-column: 1 / -1;
+        width: min(560px, 100%);
+        justify-self: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .inicio {
+        min-height: auto;
+        padding: 120px 20px 130px;
+    }
+
+    .inicio-conteudo {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .area-logo {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .linha-vertical {
+        width: min(520px, 80%);
+        height: 2px;
+        margin: 0 auto;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            #00d9ff,
+            #0088ff,
+            #8c35ff,
+            #0088ff,
+            #00d9ff,
+            transparent
+        );
+    }
+
+    .area-texto,
+    .titulo-vortex {
+        align-items: center;
+        text-align: center;
+    }
+
+    .descricao-container {
+        text-align: center;
+    }
+
+    .botoes-vortex {
+        justify-content: center;
+    }
+
+    .campeonatos {
+        padding: 90px 28px 100px;
+    }
+
+    .campeonatos-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .campeonatos-introducao {
+        max-width: 760px;
+    }
+
+    .area-vortexcampeoes {
+        justify-content: center;
+    }
+
+    .vortexcampeoes {
+        max-width: 720px;
+    }
+
+    .como-funciona,
+    .campeonatos-disponiveis {
+        margin-top: 90px;
+    }
+
+    .cards-campeonatos {
+        grid-template-columns: 1fr;
+    }
+
+    .lol-card {
+        grid-column: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .inicio {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .area-logo {
+        max-width: 320px;
+    }
+
+    p.sobrenos {
+        font-size: clamp(45px, 13vw, 72px);
+    }
+
+    p.vortexx {
+        font-size: clamp(64px, 18vw, 100px);
+    }
+
+    .botoes-vortex {
+        width: 100%;
+    }
+
+    .botao-campeonatos,
+    .botao-conhecer {
+        width: 100%;
+        text-align: center;
+    }
+
+    .seta-baixo {
+        width: 48px;
+        bottom: 24px;
+    }
+
+    .campeonatos {
+        padding: 75px 18px 85px;
+    }
+
+    .campeonatos-introducao h2 {
+        font-size: clamp(48px, 15vw, 72px);
+    }
+
+    .campeonatos-destaques {
+        gap: 7px;
+    }
+
+    .etapas-campeonato {
+        grid-template-columns: 1fr;
+    }
+
+    .etapa-card {
+        min-height: auto;
+    }
+
+    .campeonato-info {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.participar-campeonato {
+    border: none;
+    cursor: pointer;
+}
+
+.campeonato-indisponivel {
+    opacity: 0.48;
+    cursor: not-allowed;
+    filter: grayscale(0.35);
+}
+
+.campeonato-indisponivel:hover {
+    transform: none;
+    box-shadow: 0 0 16px rgba(0, 217, 255, 0.08);
+}
+
+.flash-vortex {
+    position: fixed;
+    top: 95px;
+    left: 50%;
+    z-index: 3000;
+    width: min(560px, calc(100% - 30px));
+    transform: translateX(-50%);
+    padding: 15px 18px;
+    border-radius: 10px;
+    font-family: 'Rajdhani', Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+    backdrop-filter: blur(18px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.flash-vortex.sucesso {
+    color: #baffdf;
+    border: 1px solid rgba(67, 233, 164, 0.4);
+    background: rgba(6, 45, 34, 0.92);
+}
+
+.flash-vortex.erro {
+    color: #ffc2ca;
+    border: 1px solid rgba(255, 80, 105, 0.42);
+    background: rgba(52, 8, 16, 0.92);
+}
+
+.flash-vortex.aviso {
+    color: #ffe9a6;
+    border: 1px solid rgba(255, 205, 76, 0.4);
+    background: rgba(49, 36, 7, 0.92);
+}
+
+.flash-vortex.sumindo {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-12px);
+    pointer-events: none;
+}
+
+body.modal-aberto {
+    overflow: hidden;
+}
+
+.modal-confirmacao {
+    position: fixed;
+    inset: 0;
+    z-index: 5000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.modal-confirmacao.aberto {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.78);
+    backdrop-filter: blur(8px);
+}
+
+.modal-card {
+    position: relative;
+    z-index: 1;
+    width: min(560px, 100%);
+    padding: 34px;
+    border: 1px solid rgba(0, 217, 255, 0.34);
+    border-radius: 18px;
+    background:
+        radial-gradient(circle at 90% 0%, rgba(106, 0, 255, 0.17), transparent 35%),
+        linear-gradient(145deg, rgba(14, 20, 29, 0.98), rgba(5, 8, 12, 0.98));
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.7), 0 0 35px rgba(0, 136, 255, 0.12);
+}
+
+.modal-tag {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #00d9ff;
+}
+
+.modal-card h3 {
+    margin-top: 8px;
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(36px, 5vw, 52px);
+    line-height: 1;
+}
+
+.modal-card > p:not(.modal-tag) {
+    margin-top: 18px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #aeb8c2;
+}
+
+.modal-card strong {
+    color: #ffffff;
+}
+
+.modal-acoes {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.modal-acoes button {
+    min-height: 48px;
+    border-radius: 7px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.botao-cancelar-modal {
+    color: #c2cad3;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.botao-confirmar-modal {
+    color: #ffffff;
+    border: 1px solid #00a9d0;
+    background: linear-gradient(90deg, #007fa3, #00bde7);
+    box-shadow: 0 0 18px rgba(0, 217, 255, 0.18);
+}
+
+@media (max-width: 520px) {
+    .modal-card {
+        padding: 26px 20px;
+    }
+
+    .modal-acoes {
+        grid-template-columns: 1fr;
+    }
+}
